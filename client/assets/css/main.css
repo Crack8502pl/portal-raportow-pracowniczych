@@ -499,6 +499,90 @@ a:hover {
     }
 }
 
+/* Additional styles for better UX */
+.empty-state {
+    text-align: center;
+    padding: 4rem 2rem;
+    color: var(--text-light);
+}
+
+.empty-state h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.empty-state p {
+    margin-bottom: 2rem;
+}
+
+.content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.content-header h1 {
+    margin: 0;
+}
+
+.header-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.table-actions {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.required {
+    color: var(--error-color);
+}
+
+.detail-row {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--light-gray);
+}
+
+.detail-row:last-child {
+    border-bottom: none;
+}
+
+.health-details {
+    background: var(--light-gray);
+    padding: 1rem;
+    border-radius: var(--border-radius);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .content-header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .header-actions {
+        justify-content: stretch;
+    }
+    
+    .header-actions button {
+        flex: 1;
+    }
+    
+    .table-actions {
+        flex-direction: column;
+    }
+    
+    .table-actions button {
+        width: 100%;
+    }
+}
+
 /* Print Styles */
 @media print {
     .sidebar,
