@@ -74,12 +74,12 @@ SELECT
     sample_report.report_id,
     e.id,
     CASE 
-        WHEN e.full_name = 'Jan Kowalski' THEN '07:00'
-        ELSE '08:00'
+        WHEN e.full_name = 'Jan Kowalski' THEN '07:00'::TIME
+        ELSE '08:00'::TIME
     END,
     CASE 
-        WHEN e.full_name = 'Jan Kowalski' THEN '15:30'
-        ELSE '16:00'
+        WHEN e.full_name = 'Jan Kowalski' THEN '15:30'::TIME
+        ELSE '16:00'::TIME
     END,
     e.full_name = 'Jan Kowalski'
 FROM sample_report

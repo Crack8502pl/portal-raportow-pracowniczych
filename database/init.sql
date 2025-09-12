@@ -12,11 +12,11 @@
 -- GRANT ALL PRIVILEGES ON DATABASE portal_reports TO portal_user;
 
 -- Execute all migration files in order
-\i 001-create-users.sql
-\i 002-create-employees.sql  
-\i 003-create-reports.sql
-\i 004-create-system-tables.sql
-\i 005-insert-default-data.sql
+\i /docker-entrypoint-initdb.d/migrations/001-create-users.sql
+\i /docker-entrypoint-initdb.d/migrations/002-create-employees.sql  
+\i /docker-entrypoint-initdb.d/migrations/003-create-reports.sql
+\i /docker-entrypoint-initdb.d/migrations/004-create-system-tables.sql
+\i /docker-entrypoint-initdb.d/migrations/005-insert-default-data.sql
 
 -- Grant permissions to portal_user on all tables
 GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO portal_user;
