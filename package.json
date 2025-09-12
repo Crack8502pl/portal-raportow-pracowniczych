@@ -1,0 +1,31 @@
+{
+  "name": "portal-raportow-pracowniczych",
+  "version": "1.0.0",
+  "description": "Portal do zarządzania raportami pracowniczymi",
+  "main": "server/src/app.ts",
+  "scripts": {
+    "dev": "npm run dev --prefix server",
+    "build": "npm run build --prefix server",
+    "start": "npm run start --prefix server",
+    "db:setup": "npm run db:setup --prefix server",
+    "deploy": "bash scripts/deploy.sh",
+    "test": "npm run test --prefix server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Crack8502pl/portal-raportow-pracowniczych.git"
+  },
+  "keywords": [
+    "employee",
+    "reports",
+    "portal",
+    "typescript",
+    "nodejs"
+  ],
+  "author": "Portal Team",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Crack8502pl/portal-raportow-pracowniczych/issues"
+  },
+  "homepage": "https://github.com/Crack8502pl/portal-raportow-pracowniczych#readme"
+}

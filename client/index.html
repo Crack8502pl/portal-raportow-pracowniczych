@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Raportów Pracowniczych</title>
+    <link rel="stylesheet" href="/static/assets/css/main.css">
+    <link rel="stylesheet" href="/static/assets/css/login.css">
+    <link rel="stylesheet" href="/static/assets/css/dashboard.css">
+    <link rel="stylesheet" href="/static/assets/css/forms.css">
+    <link rel="icon" type="image/x-icon" href="/static/assets/images/favicon.ico">
+</head>
+<body>
+    <!-- Loading spinner -->
+    <div id="loading-spinner" class="loading-spinner">
+        <div class="spinner"></div>
+        <div class="loading-text">Ładowanie...</div>
+    </div>
+
+    <!-- Login Page -->
+    <div id="login-page" class="page">
+        <div class="login-container">
+            <div class="login-card">
+                <div class="login-header">
+                    <img src="/static/assets/images/logo.png" alt="Logo" class="logo" onerror="this.style.display='none'">
+                    <h1>Portal Raportów Pracowniczych</h1>
+                    <p>Zaloguj się do systemu</p>
+                </div>
+                
+                <form id="login-form" class="login-form">
+                    <div class="form-group">
+                        <label for="login">Login:</label>
+                        <input type="text" id="login" name="login" required autocomplete="username">
+                        <span class="error-message" id="login-error"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password">Hasło:</label>
+                        <div class="password-input">
+                            <input type="password" id="password" name="password" required autocomplete="current-password">
+                            <button type="button" class="password-toggle" onclick="togglePassword()">
+                                <span id="password-toggle-icon">👁️</span>
+                            </button>
+                        </div>
+                        <span class="error-message" id="password-error"></span>
+                    </div>
+                    
+                    <button type="submit" class="login-button">
+                        <span class="button-text">Zaloguj się</span>
+                        <div class="button-spinner" style="display: none;"></div>
+                    </button>
+                    
+                    <div id="login-error-message" class="error-message"></div>
+                </form>
+                
+                <div class="login-footer">
+                    <p>Dane testowe:</p>
+                    <div class="test-accounts">
+                        <div class="test-account">
+                            <strong>Administrator:</strong> admin / admin123
+                        </div>
+                        <div class="test-account">
+                            <strong>Koordynator:</strong> koordynator / koord123
+                        </div>
+                        <div class="test-account">
+                            <strong>Pracownik:</strong> pracownik / prac123
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Dashboard -->
+    <div id="dashboard-page" class="page" style="display: none;">
+        <!-- Navigation Header -->
+        <header class="main-header">
+            <div class="header-content">
+                <div class="header-left">
+                    <img src="/static/assets/images/logo.png" alt="Logo" class="header-logo" onerror="this.style.display='none'">
+                    <h1 class="header-title">Portal Raportów Pracowniczych</h1>
+                </div>
+                
+                <div class="header-right">
+                    <div class="user-info">
+                        <span id="user-name" class="user-name"></span>
+                        <span id="user-role" class="user-role"></span>
+                    </div>
+                    
+                    <div class="header-actions">
+                        <button type="button" class="header-button" onclick="showProfile()">
+                            Profil
+                        </button>
+                        <button type="button" class="header-button logout-button" onclick="logout()">
+                            Wyloguj
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Sidebar Navigation -->
+        <nav id="sidebar" class="sidebar">
+            <div class="sidebar-content">
+                <div class="nav-section">
+                    <h3>Główne</h3>
+                    <ul class="nav-menu">
+                        <li><a href="#" onclick="showDashboard()" class="nav-link active" data-view="dashboard">📊 Dashboard</a></li>
+                        <li><a href="#" onclick="showReports()" class="nav-link" data-view="reports">📋 Raporty</a></li>
+                        <li><a href="#" onclick="showNewReport()" class="nav-link" data-view="new-report">➕ Nowy Raport</a></li>
+                    </ul>
+                </div>
+                
+                <div class="nav-section" id="coordinator-section" style="display: none;">
+                    <h3>Koordynator</h3>
+                    <ul class="nav-menu">
+                        <li><a href="#" onclick="showAllReports()" class="nav-link" data-view="all-reports">📊 Wszystkie Raporty</a></li>
+                        <li><a href="#" onclick="showEmployees()" class="nav-link" data-view="employees">👥 Pracownicy</a></li>
+                        <li><a href="#" onclick="showStatistics()" class="nav-link" data-view="statistics">📈 Statystyki</a></li>
+                    </ul>
+                </div>
+                
+                <div class="nav-section" id="admin-section" style="display: none;">
+                    <h3>Administrator</h3>
+                    <ul class="nav-menu">
+                        <li><a href="#" onclick="showUsers()" class="nav-link" data-view="users">👤 Użytkownicy</a></li>
+                        <li><a href="#" onclick="showSystemSettings()" class="nav-link" data-view="settings">⚙️ Ustawienia</a></li>
+                        <li><a href="#" onclick="showActivityLogs()" class="nav-link" data-view="logs">📜 Logi Aktywności</a></li>
+                        <li><a href="#" onclick="showSystemHealth()" class="nav-link" data-view="health">🏥 Status Systemu</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <div id="content-container" class="content-container">
+                <!-- Dynamic content will be loaded here -->
+            </div>
+        </main>
+    </div>
+
+    <!-- Profile Modal -->
+    <div id="profile-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Profil Użytkownika</h2>
+                <button type="button" class="close-button" onclick="closeProfile()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="profile-form">
+                    <div class="form-group">
+                        <label for="profile-full-name">Imię i nazwisko:</label>
+                        <input type="text" id="profile-full-name" name="full_name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="profile-email">Email:</label>
+                        <input type="email" id="profile-email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Login:</label>
+                        <input type="text" id="profile-login" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label>Rola:</label>
+                        <input type="text" id="profile-role" readonly>
+                    </div>
+                </form>
+                
+                <div class="password-change-section">
+                    <h3>Zmiana hasła</h3>
+                    <form id="password-change-form">
+                        <div class="form-group">
+                            <label for="current-password">Aktualne hasło:</label>
+                            <input type="password" id="current-password" name="current_password">
+                        </div>
+                        <div class="form-group">
+                            <label for="new-password">Nowe hasło:</label>
+                            <input type="password" id="new-password" name="new_password">
+                        </div>
+                        <div class="form-group">
+                            <label for="confirm-password">Potwierdź hasło:</label>
+                            <input type="password" id="confirm-password" name="confirm_password">
+                        </div>
+                        <button type="submit" class="button button-secondary">Zmień hasło</button>
+                    </form>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="button button-secondary" onclick="closeProfile()">Anuluj</button>
+                <button type="submit" form="profile-form" class="button button-primary">Zapisz zmiany</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success/Error Toast -->
+    <div id="toast" class="toast" style="display: none;">
+        <div class="toast-content">
+            <span id="toast-message"></span>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="/static/assets/js/utils.js"></script>
+    <script src="/static/assets/js/auth.js"></script>
+    <script src="/static/assets/js/employee.js"></script>
+    <script src="/static/assets/js/report-form.js"></script>
+    <script src="/static/assets/js/coordinator.js"></script>
+    <script src="/static/assets/js/admin.js"></script>
+    
+    <!-- Initialize App -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeApp();
+        });
+    </script>
+</body>
+</html>
