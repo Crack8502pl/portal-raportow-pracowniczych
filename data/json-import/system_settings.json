@@ -1,0 +1,114 @@
+{
+  "system_settings": [
+    {
+      "setting_key": "smtp_host",
+      "setting_value": "smtp.gmail.com",
+      "description": "Adres serwera SMTP"
+    },
+    {
+      "setting_key": "smtp_port",
+      "setting_value": "587",
+      "description": "Port serwera SMTP"
+    },
+    {
+      "setting_key": "smtp_secure",
+      "setting_value": "false",
+      "description": "Użyj SSL/TLS dla połączenia SMTP"
+    },
+    {
+      "setting_key": "smtp_user",
+      "setting_value": "reports@company.com",
+      "description": "Nazwa użytkownika SMTP"
+    },
+    {
+      "setting_key": "smtp_password",
+      "setting_value": "",
+      "description": "Hasło SMTP"
+    },
+    {
+      "setting_key": "email_from",
+      "setting_value": "reports@company.com",
+      "description": "Domyślny adres nadawcy email"
+    },
+    {
+      "setting_key": "email_recipients",
+      "setting_value": "manager@company.com,admin@company.com",
+      "description": "Lista odbiorców email (oddzielone przecinkami)"
+    },
+    {
+      "setting_key": "max_file_size",
+      "setting_value": "5242880",
+      "description": "Maksymalny rozmiar załącznika w bajtach (5MB)"
+    },
+    {
+      "setting_key": "allowed_extensions",
+      "setting_value": "jpg,jpeg,png,pdf,doc,docx,xls,xlsx",
+      "description": "Dozwolone rozszerzenia plików"
+    },
+    {
+      "setting_key": "text_field_max_length",
+      "setting_value": "300",
+      "description": "Maksymalna długość pól tekstowych"
+    },
+    {
+      "setting_key": "enable_registration",
+      "setting_value": "false",
+      "description": "Zezwól na rejestrację nowych użytkowników"
+    },
+    {
+      "setting_key": "enable_email_notifications",
+      "setting_value": "true",
+      "description": "Wysyłaj powiadomienia email o nowych raportach"
+    },
+    {
+      "setting_key": "company_name",
+      "setting_value": "Firma Budowlana ABC",
+      "description": "Nazwa firmy używana w raportach i emailach"
+    },
+    {
+      "setting_key": "company_address",
+      "setting_value": "ul. Budowlana 123, 00-001 Warszawa",
+      "description": "Adres firmy"
+    },
+    {
+      "setting_key": "company_phone",
+      "setting_value": "+48 22 123 45 67",
+      "description": "Telefon do firmy"
+    },
+    {
+      "setting_key": "backup_retention_days",
+      "setting_value": "30",
+      "description": "Liczba dni przechowywania kopii zapasowych"
+    },
+    {
+      "setting_key": "session_timeout_minutes",
+      "setting_value": "60",
+      "description": "Limit czasu sesji użytkownika w minutach"
+    },
+    {
+      "setting_key": "default_work_start_time",
+      "setting_value": "08:00",
+      "description": "Domyślna godzina rozpoczęcia pracy"
+    },
+    {
+      "setting_key": "default_work_end_time",
+      "setting_value": "16:00",
+      "description": "Domyślna godzina zakończenia pracy"
+    },
+    {
+      "setting_key": "reports_require_approval",
+      "setting_value": "false",
+      "description": "Raporty wymagają zatwierdzenia przez koordynatora"
+    },
+    {
+      "setting_key": "auto_backup_enabled",
+      "setting_value": "true",
+      "description": "Automatyczne tworzenie kopii zapasowych"
+    },
+    {
+      "setting_key": "maintenance_mode",
+      "setting_value": "false",
+      "description": "Tryb konserwacji systemu"
+    }
+  ]
+}

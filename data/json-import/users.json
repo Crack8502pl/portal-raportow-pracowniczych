@@ -1,0 +1,52 @@
+{
+  "users": [
+    {
+      "login": "admin",
+      "password": "admin123",
+      "full_name": "Administrator Systemu",
+      "email": "admin@company.com",
+      "role": "admin",
+      "is_active": true
+    },
+    {
+      "login": "koordynator",
+      "password": "koord123",
+      "full_name": "Koordynator Projektów",
+      "email": "coordinator@company.com",
+      "role": "coordinator",
+      "is_active": true
+    },
+    {
+      "login": "pracownik",
+      "password": "prac123",
+      "full_name": "Jan Kowalski",
+      "email": "employee@company.com",
+      "role": "employee",
+      "is_active": true
+    },
+    {
+      "login": "kierownik",
+      "password": "kier123",
+      "full_name": "Agnieszka Dąbrowska",
+      "email": "manager@company.com",
+      "role": "coordinator",
+      "is_active": true
+    },
+    {
+      "login": "elektryk",
+      "password": "elek123",
+      "full_name": "Anna Nowak",
+      "email": "anna.nowak@company.com",
+      "role": "employee",
+      "is_active": true
+    },
+    {
+      "login": "hydraulik",
+      "password": "hydr123",
+      "full_name": "Piotr Wiśniewski",
+      "email": "piotr.wisniewski@company.com",
+      "role": "employee",
+      "is_active": true
+    }
+  ]
+}

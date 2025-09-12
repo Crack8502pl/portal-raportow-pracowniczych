@@ -1,0 +1,132 @@
+{
+  "reports": [
+    {
+      "created_by_login": "pracownik",
+      "report_date": "2024-09-10",
+      "object_name": "Budowa domu jednorodzinnego ul. Przykładowa 15",
+      "work_description": "Wykonano fundamenty pod budynek mieszkalny. Zalano beton i oczekiwanie na związanie. Wszystkie prace przebiegały zgodnie z harmonogramem.",
+      "notes": "Pogoda sprzyjająca, brak problemów technicznych. Materiały dostarczone na czas.",
+      "status": "sent",
+      "workers": [
+        {
+          "employee_name": "Jan Kowalski",
+          "start_time": "07:00",
+          "end_time": "15:30",
+          "is_creator": true
+        },
+        {
+          "employee_name": "Michał Lewandowski",
+          "start_time": "08:00",
+          "end_time": "16:00",
+          "is_creator": false
+        },
+        {
+          "employee_name": "Robert Woźniak",
+          "start_time": "08:00",
+          "end_time": "16:00",
+          "is_creator": false
+        }
+      ]
+    },
+    {
+      "created_by_login": "elektryk",
+      "report_date": "2024-09-11",
+      "object_name": "Budynek biurowy ul. Nowoczesna 42",
+      "work_description": "Montaż instalacji elektrycznej na pierwszym piętrze. Poprowadzono przewody w ścianach działowych i wykonano punkty świetlne.",
+      "notes": "Potrzebne będzie dodatkowe zamówienie przewodów YDY 3x2,5mm2 - około 50 metrów.",
+      "status": "draft",
+      "workers": [
+        {
+          "employee_name": "Anna Nowak",
+          "start_time": "07:30",
+          "end_time": "15:30",
+          "is_creator": true
+        },
+        {
+          "employee_name": "Krzysztof Zieliński",
+          "start_time": "09:00",
+          "end_time": "17:00",
+          "is_creator": false
+        }
+      ]
+    },
+    {
+      "created_by_login": "hydraulik",
+      "report_date": "2024-09-12",
+      "object_name": "Remont łazienki ul. Słoneczna 7/12",
+      "work_description": "Wymiana instalacji wodociągowej i kanalizacyjnej. Demontaż starej instalacji i montaż nowych rur PCV oraz miedzianych.",
+      "notes": "Klient chce dodatkowy punkt wody w kuchni - do ustalenia w przyszłym tygodniu.",
+      "status": "sent",
+      "workers": [
+        {
+          "employee_name": "Piotr Wiśniewski",
+          "start_time": "08:00",
+          "end_time": "16:00",
+          "is_creator": true
+        },
+        {
+          "employee_name": "Jan Kowalski",
+          "start_time": "09:00",
+          "end_time": "15:00",
+          "is_creator": false
+        }
+      ]
+    },
+    {
+      "created_by_login": "kierownik",
+      "report_date": "2024-09-13",
+      "object_name": "Budowa hali magazynowej ul. Przemysłowa 88",
+      "work_description": "Kontrola jakości i postępu prac budowlanych. Sprawdzenie zgodności z projektem technicznym oraz harmonogramem realizacji.",
+      "notes": "Wszystko przebiega zgodnie z planem. Następny etap - montaż konstrukcji stalowej zaplanowany na przyszły tydzień.",
+      "status": "sent",
+      "workers": [
+        {
+          "employee_name": "Agnieszka Dąbrowska",
+          "start_time": "07:00",
+          "end_time": "15:00",
+          "is_creator": true
+        },
+        {
+          "employee_name": "Barbara Szymańska",
+          "start_time": "08:00",
+          "end_time": "14:00",
+          "is_creator": false
+        },
+        {
+          "employee_name": "Magdalena Kaczmarek",
+          "start_time": "09:00",
+          "end_time": "13:00",
+          "is_creator": false
+        }
+      ]
+    },
+    {
+      "created_by_login": "pracownik",
+      "report_date": "2024-09-14",
+      "object_name": "Remont elewacji kamienicy ul. Stara 33",
+      "work_description": "Malowanie elewacji frontowej budynku zabytkowego. Przygotowanie powierzchni, szpachlowanie i nakładanie farby mineralnej.",
+      "notes": "Używana farba specjalna do zabytków - kolor jasny beż zgodny z wytycznymi konserwatora.",
+      "status": "draft",
+      "workers": [
+        {
+          "employee_name": "Maria Wójcik",
+          "start_time": "08:00",
+          "end_time": "16:00",
+          "is_creator": false
+        },
+        {
+          "employee_name": "Katarzyna Kamińska",
+          "start_time": "08:30",
+          "end_time": "16:30",
+          "is_creator": false
+        },
+        {
+          "employee_name": "Jan Kowalski",
+          "start_time": "07:30",
+          "end_time": "15:30",
+          "is_creator": true
+        }
+      ]
+    }
+  ]
+}

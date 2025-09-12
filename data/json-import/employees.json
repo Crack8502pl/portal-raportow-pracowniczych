@@ -1,0 +1,100 @@
+{
+  "employees": [
+    {
+      "full_name": "Jan Kowalski",
+      "position": "Pracownik budowlany",
+      "department": "Budowa",
+      "email": "jan.kowalski@company.com",
+      "phone": "+48 123 456 789",
+      "is_active": true
+    },
+    {
+      "full_name": "Anna Nowak",
+      "position": "Elektryk",
+      "department": "Instalacje elektryczne",
+      "email": "anna.nowak@company.com",
+      "phone": "+48 987 654 321",
+      "is_active": true
+    },
+    {
+      "full_name": "Piotr Wiśniewski",
+      "position": "Hydraulik",
+      "department": "Instalacje sanitarne",
+      "email": "piotr.wisniewski@company.com",
+      "phone": "+48 555 123 456",
+      "is_active": true
+    },
+    {
+      "full_name": "Maria Wójcik",
+      "position": "Malarz",
+      "department": "Wykończenia",
+      "email": "maria.wojcik@company.com",
+      "phone": "+48 444 789 123",
+      "is_active": true
+    },
+    {
+      "full_name": "Tomasz Kowalczyk",
+      "position": "Dekarz",
+      "department": "Dachy",
+      "email": "tomasz.kowalczyk@company.com",
+      "phone": "+48 666 333 999",
+      "is_active": true
+    },
+    {
+      "full_name": "Katarzyna Kamińska",
+      "position": "Tynkarz",
+      "department": "Wykończenia",
+      "email": "katarzyna.kaminska@company.com",
+      "phone": "+48 777 888 111",
+      "is_active": true
+    },
+    {
+      "full_name": "Michał Lewandowski",
+      "position": "Murarz",
+      "department": "Budowa",
+      "email": "michal.lewandowski@company.com",
+      "phone": "+48 222 444 666",
+      "is_active": true
+    },
+    {
+      "full_name": "Agnieszka Dąbrowska",
+      "position": "Kierownik budowy",
+      "department": "Zarządzanie",
+      "email": "agnieszka.dabrowska@company.com",
+      "phone": "+48 111 222 333",
+      "is_active": true
+    },
+    {
+      "full_name": "Krzysztof Zieliński",
+      "position": "Spawacz",
+      "department": "Konstrukcje stalowe",
+      "email": "krzysztof.zielinski@company.com",
+      "phone": "+48 333 555 777",
+      "is_active": true
+    },
+    {
+      "full_name": "Barbara Szymańska",
+      "position": "Geodeta",
+      "department": "Pomiary",
+      "email": "barbara.szymanska@company.com",
+      "phone": "+48 888 999 111",
+      "is_active": true
+    },
+    {
+      "full_name": "Robert Woźniak",
+      "position": "Operator koparki",
+      "department": "Roboty ziemne",
+      "email": "robert.wozniak@company.com",
+      "phone": "+48 444 555 666",
+      "is_active": true
+    },
+    {
+      "full_name": "Magdalena Kaczmarek",
+      "position": "Architekt",
+      "department": "Projektowanie",
+      "email": "magdalena.kaczmarek@company.com",
+      "phone": "+48 777 222 888",
+      "is_active": true
+    }
+  ]
+}
