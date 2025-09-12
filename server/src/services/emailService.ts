@@ -6,7 +6,7 @@ class EmailService {
   private transporter: nodemailer.Transporter;
 
   constructor() {
-    this.transporter = nodemailer.createTransporter(emailConfig.smtp);
+    this.transporter = nodemailer.createTransport(emailConfig.smtp);
   }
 
   async sendReportNotification(reportData: {
